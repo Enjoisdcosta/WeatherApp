@@ -8,9 +8,9 @@ interface APIEndPoints {
 
     @GET(APIDetails.WEATHER_ENDPOINT)
     suspend fun getWeatherByCity(
-        @Query("q") query: String,        // City name, state code, and country code query
-        @Query("appid") apiKey: String,   // API key
-        @Query("units") units: String = "metric"  // Unit of measurement (metric for Celsius)
+        @Query("q") query: String,
+        @Query("appid") apiKey: String,
+        @Query("units") units: String = "metric"
     ): Weather
 
 

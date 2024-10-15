@@ -24,7 +24,7 @@ class WeatherViewModel @Inject constructor(
 
         viewModelScope.launch {
             try {
-                val response = repository.getWeatherByCity(query, "42def148c9bc0052a33b1e2a256bfc68")  // Use your API key here
+                val response = repository.getWeatherByCity(query, "42def148c9bc0052a33b1e2a256bfc68")
                 weatherResponse = response
             } catch (e: Exception) {
                 errorMessage = "Error fetching weather data"
